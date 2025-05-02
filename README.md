@@ -2,14 +2,11 @@
 
 A TypeScript Node.js backend application.
 
-## Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-
 ## Installation
 
-1. Clone the repository
+1. Clone the repository : https://github.com/MrNeoW/halo-stack.git
+ - Make sure you are in the master branch
+ 
 2. Install dependencies:
    ```bash
    npm install
@@ -22,41 +19,21 @@ To start the development server with hot-reload:
 npm run dev
 ```
 
-## Building
-
-To build the project:
-```bash
-npm run build
-```
-
-## Production
-
-To start the production server:
-```bash
-npm start
-```
-
-## Testing
-
-To run tests:
-```bash
-npm test
-```
-
 ## Project Structure
 
 ```
 halo-stack/
 ├── src/            # Source files
+│   └── config      # AWS DynamoClient.ts - this is the setup to use the AWS DynamoDB
+│   └── controllers # DynamoDBController.ts - in here is our create, update, put and get calls to the AWS DynamoDB
+│   └── models      # Was our table structure for the sqlite db
 │   └── index.ts    # Main application file
 ├── dist/           # Compiled output (generated)
 ├── package.json    # Project configuration
 └── tsconfig.json   # TypeScript configuration
+└── database.sqlite # Local sqlite db used for the testing of application
 ```
 
-## Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
 ```
 PORT=8000
 ```
