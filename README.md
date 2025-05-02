@@ -6,7 +6,7 @@ A TypeScript Node.js backend application.
 
 1. Clone the repository : https://github.com/MrNeoW/halo-stack.git
  - Make sure you are in the master branch
- 
+ - Have Node 18 and up
 2. Install dependencies:
    ```bash
    npm install
